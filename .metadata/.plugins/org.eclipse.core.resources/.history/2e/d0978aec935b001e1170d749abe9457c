@@ -1,0 +1,20 @@
+package com.practice;
+
+public class P1 {
+	
+	
+	public static void main(String[] args) {
+		String g = "a1b2c4";
+		String g1 = g.replaceAll("[a-z]", "");
+		String g2 = g.replaceAll("[0-9]", "");
+		System.out.println(g1.charAt(0));
+		System.out.println(g1);
+		StringBuilder sb = new StringBuilder();
+		for(int i=0;i<g1.length();i++) {
+			sb.append(g2.charAt(i));
+		}
+		System.out.println(sb);
+		
+	}
+
+}

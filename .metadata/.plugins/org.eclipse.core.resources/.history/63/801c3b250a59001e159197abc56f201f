@@ -1,0 +1,13 @@
+package com.practice.functionalinterface;
+
+import java.util.function.Predicate;
+
+public class PredicateExam {
+	public static void main(String[] args) {
+		Predicate<String> v = x->(x.length()<2);
+		Predicate<String> v1 = x->(x.length()>3);
+		System.out.println(v.and(v1).test("murugan"));
+		System.out.println(v.or(v1).test("murugan"));
+	}
+
+}

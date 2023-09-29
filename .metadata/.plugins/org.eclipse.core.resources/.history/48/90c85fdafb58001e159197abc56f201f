@@ -1,0 +1,23 @@
+package pattern;
+
+public class PatternPractice {
+	public static void main(String[] args) {
+		int x = 5;
+		for (int i = 1; i <= x; i++) { 
+			for(int k=1;k<=i;k++) {
+				System.out.print(" ");
+			}
+			for (int j = i; j <= x; j++) {
+				System.out.print("*"+" ");
+			}
+			System.out.println(" ");
+		}
+		
+//		for(int u=1;u<=x;u++) {
+//			for(int u1=1;u1<=x-1;u1++) {
+//				System.out.println(" ");
+//			}
+//			 
+//		}
+	}
+}

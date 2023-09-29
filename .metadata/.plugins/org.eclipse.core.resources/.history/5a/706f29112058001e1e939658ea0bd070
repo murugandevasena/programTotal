@@ -1,0 +1,11 @@
+package com.practice;
+
+public class InfosysPractice {
+	public static void main(String[] args) {
+		String g = "Santhi 123 my mob : 898797879 , I am from Chennai";
+		
+		String[] g1 = g.split("\\s|,\\s*|\\s*:\\s*");
+		System.out.println(g1[1]);
+	}
+
+}

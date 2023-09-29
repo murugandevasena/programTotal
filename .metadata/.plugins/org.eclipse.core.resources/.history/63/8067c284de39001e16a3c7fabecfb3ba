@@ -1,0 +1,19 @@
+package com.practice.daily;
+
+import java.util.LinkedHashSet;
+
+public class RemoveRepeatedChar {
+	
+	public static void main(String[] args) {
+		
+		
+		String g ="onesofttechnology";
+		char[] d = g.toCharArray();
+		
+		LinkedHashSet<Character> h = new LinkedHashSet<Character>();
+		for(char c:d) {
+			h.add(c);
+		}
+		System.out.println(h);
+	}
+}

@@ -1,0 +1,9 @@
+package com.practice.daily;
+
+public class NumberRemovalFromString {
+	public static void main(String[] args) {
+		String a = "abc123def";
+		System.out.println(b);
+	}
+
+}

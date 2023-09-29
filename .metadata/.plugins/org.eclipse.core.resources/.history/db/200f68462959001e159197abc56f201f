@@ -1,0 +1,11 @@
+package com.occurance;
+
+public class CountTest {
+	public static void main(String[] args) {
+		String g= "c1b2a3";
+		StringBuilder sb = new StringBuilder();
+		String g1 = g.replaceAll("\\d", g);
+		System.out.println(g1);
+	}
+
+}

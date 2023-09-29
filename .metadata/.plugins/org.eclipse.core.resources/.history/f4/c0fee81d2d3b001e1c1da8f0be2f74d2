@@ -1,0 +1,9 @@
+package com.practice.exception;
+
+
+public class BrandNotFoundException extends Exception {
+	public String brandNotFound(String msg) {
+		return "Brand name not found";
+	}
+
+}

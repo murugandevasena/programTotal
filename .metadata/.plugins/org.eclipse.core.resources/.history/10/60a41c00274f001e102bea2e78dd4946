@@ -1,0 +1,60 @@
+package Date;
+
+import java.text.Format;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+
+public class DateTime {
+	public static void main(String[] args) {
+		LocalDate localDate = LocalDate.now();
+		System.out.println("Local date:"+localDate);
+		
+		
+		LocalTime localTime = LocalTime.now();
+		System.out.println("Local Time:"+localTime);
+		
+		LocalDateTime localDateTime = LocalDateTime.now();
+		
+		DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		System.out.println(localDateTime.format(format));
+		
+		ZonedDateTime zone = ZonedDateTime.now();
+		System.out.println(zone);
+		
+		Month month = localDateTime.getMonth();
+		System.out.println(month);
+		int day = localDateTime.getDayOfMonth();
+		System.out.println(day);
+		int day1 = localDate.getDayOfYear();
+		System.out.println(day1);
+		
+		LocalDate day2 = localDate.now();
+		System.out.println(day2.getDayOfMonth());
+		
+		Format f = new SimpleDateFormat("EEEE");
+		String st = f.format(new Date());
+		System.out.println(st);
+		
+		Date dt = new Date();
+		Calendar c= Calendar.getInstance();
+		c.setTime(dt);
+		c.add(Calendar.DATE, 1);
+		System.out.println(c);
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

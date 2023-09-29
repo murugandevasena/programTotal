@@ -1,0 +1,38 @@
+package Stream;
+
+public class TCSAddress {
+	private int doorNo;
+	private String streetName;
+	private String landMark;
+	private int pinCode;
+	public int getDoorNo() {
+		return doorNo;
+	}
+	public void setDoorNo(int doorNo) {
+		this.doorNo = doorNo;
+	}
+	public String getStreetName() {
+		return streetName;
+	}
+	public void setStreetName(String streetName) {
+		this.streetName = streetName;
+	}
+	public String getLandMark() {
+		return landMark;
+	}
+	public void setLandMark(String landMark) {
+		this.landMark = landMark;
+	}
+	public int getPinCode() {
+		return pinCode;
+	}
+	public void setPinCode(int pinCode) {
+		this.pinCode = pinCode;
+	}
+	
+	@Override
+	public String toString() {
+		return "TCSAddress [doorNo=" + doorNo + ", streetName=" + streetName + ", landMark=" + landMark + ", pinCode="
+				+ pinCode + "]";
+	}
+}

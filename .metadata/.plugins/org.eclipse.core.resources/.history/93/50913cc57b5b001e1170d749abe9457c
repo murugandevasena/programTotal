@@ -1,0 +1,52 @@
+package Stream;
+
+public class TCSEmployee {
+	private int id;
+	private String name;
+	private int age;
+	private int contactNo;
+	private String city;
+	private TCSAddress tcsAddress;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public int getContactNo() {
+		return contactNo;
+	}
+	public void setContactNo(int contactNo) {
+		this.contactNo = contactNo;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public TCSAddress getTcsAddress() {
+		return tcsAddress;
+	}
+	public void setTcsAddress(TCSAddress tcsAddress) {
+		this.tcsAddress = tcsAddress;
+	}
+	
+	@Override
+	public String toString() {
+		return "TCSEmployee [id=" + id + ", name=" + name + ", age=" + age + ", contactNo=" + contactNo + ", city="
+				+ city + ", tcsAddress=" + tcsAddress + "]";
+	}	
+}

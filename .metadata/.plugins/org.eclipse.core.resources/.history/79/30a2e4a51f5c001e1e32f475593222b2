@@ -1,0 +1,29 @@
+package TestPractice;
+
+public class Hpractice {
+	public static void main(String[] args) {
+		String f="w3f4g6";
+		String output = print(f);
+		System.out.println(output);
+	}
+
+	private static String print(String f) {
+		StringBuilder result = new StringBuilder();
+		int i=0;
+		while(i<f.length()) {
+			char c = f.charAt(i);
+			i++;
+			int count =0;
+			while(i<f.length() && Character.isDigit(f.charAt(i))) {
+				count = Character.getNumericValue(f.charAt(i));
+				i++;
+			}
+			for(int j=0;j<count;j++) {
+				result.append(c);
+			}
+			
+		}
+		return result.toString();
+	}
+
+}

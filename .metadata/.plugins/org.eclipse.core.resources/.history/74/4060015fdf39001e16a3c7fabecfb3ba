@@ -1,0 +1,26 @@
+package com.practice.daily;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class RemoveRepeatedChar {
+	
+	public static void main(String[] args) {
+		
+		
+		String g ="onesofttechnology";
+		char[] d = g.toCharArray();
+		int x= strlen(d);
+		LinkedHashSet<Character> h = new LinkedHashSet<Character>();
+		for(char c:d) {
+			h.add(c);
+		}
+		System.out.println(h);
+	}
+
+	private static int strlen(char[] d) {
+		// TODO Auto-generated method stub
+		return d.length;
+	}
+}

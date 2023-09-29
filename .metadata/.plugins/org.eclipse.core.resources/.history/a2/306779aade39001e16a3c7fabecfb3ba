@@ -1,0 +1,33 @@
+package com.practice.daily;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class RemoveRepeatedChar {
+	
+	public static void main(String[] args) {
+		
+		
+		String g ="onesofttechnology";
+		char[] d = g.toCharArray();
+		
+		
+		Set<Character>duplicate=new HashSet<>();
+		Set<Character>uniq=new HashSet<>();
+		for(char e:g.toCharArray()) {
+			if(!uniq.add(e)) {
+				duplicate.add(e);
+			}}
+			for(char f:duplicate) {
+				System.out.println("another wau using for loop"+f);
+			}
+		}
+		
+		LinkedHashSet<Character> h = new LinkedHashSet<Character>();
+		for(char c:d) {
+			h.add(c);
+		}
+		System.out.println(h);
+	}
+}

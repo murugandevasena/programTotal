@@ -1,0 +1,26 @@
+package com.practice.daily;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class TwoListSorting {
+	public static void main(String [] args) {
+		
+		Map<Integer,String> map = new HashMap<Integer, String>();
+		map.put(0, "a");
+		map.put(1, "b");
+		map.put(0, "c");
+		map.put(2, "d");
+		map.put(3, "f");
+		map.put(3, "g");
+		map.put(4, "h");
+		map.put(4, "j");
+		map.put(5, "k");
+		
+		for(Map.Entry<Integer, String> entry:map.entrySet()) {
+			System.out.println(entry);
+		}
+		
+	}
+
+}

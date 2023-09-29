@@ -1,0 +1,12 @@
+package com.practice.functionalinterface;
+
+import java.util.function.Consumer;
+
+public class ConsumerExam {
+	public static void main(String[] args) {
+	Consumer<Integer> con = x->System.out.println(x*x);
+	con.accept(3);
+		
+		
+	}
+}

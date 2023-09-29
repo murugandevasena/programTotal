@@ -1,0 +1,28 @@
+package TestPractice;
+
+import java.util.HashSet;
+import java.util.function.Predicate;
+
+public class Test {
+public static void main(String[] args) {
+	//input=usdggssj
+	//output=usdgsj s,g
+	String input ="usdggssj";
+	char[] a = input.toCharArray();
+	
+	HashSet<Character> hs = new HashSet<Character>();
+	HashSet<Character> dub = new HashSet<Character>();
+	
+	for(int i=0;i<a.length;i++) {
+		if(!hs.add(a[i])) {
+			dub.add(a[i]);
+		}	
+	}
+	System.out.println(dub);
+	
+	
+	Predicate<Integer> yu = x-> x>18;
+	System.out.println(yu.test(19));
+	
+}
+}

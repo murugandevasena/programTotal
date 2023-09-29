@@ -1,0 +1,124 @@
+package Stream;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class MainDriver {
+	public static void main(String[] args) {
+		
+		List<Employee> li = new ArrayList<Employee>();
+		Employee e1 = new Employee("muru",32,13000,"male","RD");
+		Employee e2 = new Employee("PriyaRaja",22,12000,"female","IT");
+		Employee e3 = new Employee("ram",28,14000,"male","network");
+		Employee e4 = new Employee("Prema",40,20000,"female","IT");
+		Employee e5 = new Employee("samy",30,15000,"male","IT");
+		Employee e6 = new Employee("Monisha",76,13000,"female","RD");
+		Employee e7 = new Employee("Susmitha",19,18000,"female","IT");
+		Employee e8 = new Employee("Vikram",45,40000,"male","network");
+		Employee e9 = new Employee("dugazh",37,70000,"male","IT");
+		Employee e10 = new Employee("rampradesh",38,35000,"male","RD");
+		li.add(e1);
+		li.add(e2);
+		li.add(e3);
+		li.add(e4);
+		li.add(e5);
+		li.add(e6);
+		li.add(e7);
+		li.add(e8);
+		li.add(e9);
+		li.add(e10);
+		
+		System.out.println(li);
+		List<Employee> incrementedEmployee = li.stream().map(x->{
+			if(x.getAge()>30) {
+				x.setSalary(x.getSalary()+x.getSalary()*10/100);
+			}
+			return x; 
+		}).collect(Collectors.toList());
+		System.out.println(incrementedEmployee);
+		
+		List<Integer> lk = li.stream().filter(x->x.getAge()>30).map(y->y.getSalary()).collect(Collectors.toList());
+		List<Employee> le = li.stream().filter(x->x.getAge()>30).collect(Collectors.toList());
+		System.out.println("List of employee with more than 30 age :" +le);
+		
+		System.out.println(lk);
+		
+		long count = li.stream().filter(x->x.getGender()=="male").count();
+		System.out.println(count);
+		//Get name they have age >30
+		List<String> lname = li.stream().filter(x->x.getAge()>30).map(y->y.getName()).collect(Collectors.toList());
+		System.out.println("emp name"+lname);
+		
+		//Get IT team people only
+		List<Employee> ld = li.stream().filter(x->x.getDepartment()=="IT").collect(Collectors.toList());
+		System.out.println("list of employee from IT :"+ld);
+		
+		
+		//get Name startsWith 'r'
+		List<Employee> lst = li.stream().filter(x->x.getName().startsWith("r")).collect(Collectors.toList());
+		System.out.println("Name start with R:"+lst);
+		
+		//get last character
+		List<Character> l = li.stream().filter(x->x.getName().length()>4).map(y->y.getName().charAt(y.getName().length()-1)).collect(Collectors.toList());
+		
+		System.out.println(l);
+		
+		//Second maximum salary with all details
+		Employee seSalary = li.stream().sorted(Comparator.comparing(x->-x.getSalary())).toList().get(1);
+		System.out.println("second max salry with details:"+seSalary);
+		
+		//second max salary alone
+		long seSalary2 = li.stream().sorted(Comparator.comparingInt(Employee::getSalary).reversed()).map(y->y.getSalary()).skip(1).findFirst().get();
+		System.out.println("Second salary: "+seSalary2);
+		
+		Employee secondMaxSalary = li.stream().sorted(Comparator.comparingInt(Employee::getSalary).reversed()).skip(1).findFirst().get();
+		System.out.println(secondMaxSalary);
+		 
+		//sum of salary
+		long sumSalary = li.stream().collect(Collectors.summingInt(Employee::getSalary));
+		System.out.println(sumSalary);
+		
+		//get Male and female counting
+//		Map<String, Long> ge = li.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.counting()));
+//		System.out.println(ge);
+		Map<String, Long> ge = li.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.counting()));
+		System.out.println("Male and Female Count:"+ge);
+		
+		//find Max salary
+		
+		Employee firstMaxsalary = li.stream().sorted(Comparator.comparingInt(Employee::getSalary).reversed()).findFirst().get();
+		
+		System.out.println("FirstMaxsalary" + firstMaxsalary);
+		
+//		List<Employee> firstMSalary  = li.stream().sorted(Comparator.comparingInt(Employee::getSalary)).toList();
+//		System.out.println(firstMSalary);
+		 
+		//Map
+		Map<Integer,String> map = li.stream().collect(Collectors.toMap(Employee::getAge, Employee::getName));
+		System.out.println(map);
+		
+		//set
+		Set<Employee> hs = li.stream().collect(Collectors.toSet());
+		System.out.println(hs);
+		
+		//ArrayList
+		ArrayList<Employee> as = li.stream().collect(Collectors.toCollection(ArrayList::new));
+		System.out.println(as);
+		
+		Employee e = li.stream().filter(x->x.getSalary()>25000).sorted(Comparator.comparingInt(Employee::getAge).reversed()).sorted(Comparator.comparing(Employee::getName).reversed()).findFirst().get();
+		System.out.println("onwards condition:"+e);
+		
+
+       Map<Integer,Integer> ml = li.stream().collect(Collectors.toMap(Employee::getAge, Employee::getSalary));
+       System.out.println(ml);
+			
+	}
+
+}

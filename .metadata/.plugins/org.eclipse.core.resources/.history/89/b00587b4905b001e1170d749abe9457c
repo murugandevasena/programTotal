@@ -1,0 +1,14 @@
+package com.practice;
+
+public class P1 {
+	
+	
+	public static void main(String[] args) {
+		String g = "a1b2c4";
+		String g1 = g.replace("^[a-z]", "");
+		String g2 = g.replace("^[0-9]", "");
+		System.out.println(g1);
+		
+	}
+
+}

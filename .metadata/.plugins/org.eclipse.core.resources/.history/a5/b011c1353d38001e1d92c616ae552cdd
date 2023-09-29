@@ -1,0 +1,10 @@
+package com.practice.daily;
+
+public class NumberRemovalFromString {
+	public static void main(String[] args) {
+		String a = "abc123def";
+		String b= a.substring(3,6);
+		System.out.println(b);
+	}
+
+}

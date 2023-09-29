@@ -1,0 +1,16 @@
+package com.practice.stringpractice;
+
+public class StringP {
+	
+	public static void main(String[] args) {
+		String a = "java";
+		System.out.println(a.hashCode());
+		String b="java";
+		System.out.println(b.hashCode());
+		a= a.concat(b);
+		System.out.println(a.hashCode());
+		
+	}
+	
+
+}

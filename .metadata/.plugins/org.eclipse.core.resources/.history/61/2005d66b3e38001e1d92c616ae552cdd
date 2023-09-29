@@ -1,0 +1,11 @@
+package com.practice.daily;
+
+public class NumberRemovalFromString {
+	public static void main(String[] args) {
+		String a = "abc123def";
+		String c= a.replaceAll("\\a-z", "");
+		System.out.println(c);
+		
+	}
+
+}

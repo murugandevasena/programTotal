@@ -1,0 +1,31 @@
+package com.practice;
+
+public class CharacterPrintBasedOnNumber {
+
+	public static void main(String[] args) {
+		String g = "a2b2c4";
+		String output = printNoOfTimes(g);
+		System.out.println(output);
+
+	}
+
+	private static String printNoOfTimes(String g) {
+		int i = 0;
+		StringBuilder result = new StringBuilder();
+		while (i < g.length()) {
+			char character = g.charAt(i);
+			
+			int count = 0;
+			while (i < g.length() && Character.isDigit(g.charAt(i))) {
+				count = count * 10 + Character.getNumericValue(g.charAt(i));
+				i++;
+			}
+			for (int j = 0; j < count; j++) {
+				result.append(character);
+			}
+			i++;
+		}
+		return result.toString();
+	}
+
+}

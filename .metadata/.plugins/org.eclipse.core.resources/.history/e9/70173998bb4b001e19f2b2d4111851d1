@@ -1,0 +1,27 @@
+package com.practice.exception;
+
+public class Login {
+	static String p= "murugan";
+	public static void main(String[] args) throws PasswordException  {
+		Login l= new Login();
+		l.checkPassword(p) ;
+	}
+	private static void checkPassword(String p2) throws PasswordException {
+		// TODO Auto-generated method stub
+		try {
+			if(p2.length()>8) {
+				System.out.println("Login successfully.");
+			}
+			else {
+				throw new PasswordException("Pass word not follow the standard one.");	
+			}
+		} 
+		finally {
+			System.out.println("password not correct");
+		}
+	}
+
+	
+	
+
+}

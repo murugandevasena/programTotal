@@ -1,0 +1,5 @@
+package com.practice.hashcodeequalsoverride;
+
+public class SampleMap {
+
+}

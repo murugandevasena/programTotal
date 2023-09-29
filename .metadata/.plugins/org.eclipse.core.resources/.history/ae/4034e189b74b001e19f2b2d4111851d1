@@ -1,0 +1,28 @@
+package com.practice.exception;
+
+public class MultiCatchPratice {
+	public static void main(String[] args) {
+		
+		String[] g= {"sun","moon","star"};
+		System.out.println(g.length);
+		try {
+			for(int i=0;i<=g.length;i++) {
+				System.out.println(g[i].substring(1, 3));
+			}
+		}
+//		catch(StringIndexOutOfBoundsException s) {
+//			s.printStackTrace();
+//			System.out.println(s);
+//		}
+//		catch (IndexOutOfBoundsException i) {
+//			System.out.println("Index length is started form 0 index.");
+//		}
+//		catch (RuntimeException r) {
+//			System.out.println(r);
+//		}
+		finally {
+			System.out.println("Try to focus size of an string array.");
+		}
+	}
+
+}

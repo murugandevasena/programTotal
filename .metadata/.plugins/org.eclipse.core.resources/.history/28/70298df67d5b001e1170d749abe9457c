@@ -1,0 +1,26 @@
+package Stream;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class UseTCSEmployee {
+	public static void main(String[] args) {
+		
+		TCSAddress tadd = new TCSAddress(187, "next to dsp office", "jayankondam", 621802);
+		TCSAddress tadd1 = new TCSAddress(101, "Vivekandha street", "Kumbakonam", 621843);
+		TCSAddress tadd2 = new TCSAddress(156, "Thendral street", "Kovilpatti", 621805);
+		TCSAddress tadd3 = new TCSAddress(296, "Velautha Nagar", "Karadikulam", 621810);
+		
+		TCSEmployee tc = new TCSEmployee(1, "Murugan", 23, 95853400, "sirucheri", tadd);
+		TCSEmployee tc1 = new TCSEmployee(2, "Pandiyan", 29, 95853409, "chennaione", tadd1);
+		TCSEmployee tc2 = new TCSEmployee(3, "Rangan", 30, 85853409, "TechPark", tadd2);
+		TCSEmployee tc3 = new TCSEmployee(4, "Raja", 39, 76853409, "Karapakkam", tadd3);
+		
+		List<TCSEmployee> dd = Arrays.asList(tc,tc1,tc2,tc3);
+		
+		TCSEmployee t = dd.stream().filter(x->x.getCity()=="Karapakkam").toList().get(1);
+		System.out.println(t);
+		
+	}
+
+}

@@ -1,0 +1,63 @@
+package com.occurance;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.function.BiConsumer;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class CharFollowedByItsCount {
+	public static void main(String[] args) {
+		char[] a = { 't', 'e', 'e', 's', 's', 's', 'h' };
+		String lastOutput = StringCount(a);
+		System.out.println(lastOutput);
+		int count = 0;
+		//System.out.println(a.length);
+		
+		List<Character> list = new ArrayList<Character>();
+		for(Character c: a) {
+			list.add(c);
+		}
+		
+		
+//		Stream<Character> charStream2 = IntStream.range(0, a.length)
+//		        .mapToObj(idx -> a[idx]);	
+//		String string = charStream2.map(String::valueOf).collect(Collectors.joining());
+//		System.out.println(string);
+	}
+
+
+	private static String StringCount(char[] a1) {
+//		if (a1 == null || a1.length == 0) {
+//			return "nothing";
+//		}
+		StringBuilder sb = new StringBuilder();
+		char presentChar = a1[0];
+		int count = 1;
+
+		for (int i = 1; i < a1.length; i++) {
+			if (a1[i] == presentChar) {
+				count++;
+			} else {
+				sb.append(presentChar);
+				if (count > 1) {
+					sb.append(count);	
+				}
+				presentChar=a1[i];
+				count = 1;
+			}			
+		}
+		sb.append(presentChar);
+//		if (count >1) {
+//			sb.append(count);
+//			
+//		}
+		return sb.toString();
+	}
+
+}

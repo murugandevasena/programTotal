@@ -1,0 +1,28 @@
+package com.practice.exception;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class UseSuperMarket {
+;	public static void main(String[] args) throws BrandNotFound {
+		
+		SuperMarget s1 = new SuperMarget("", 1, "Parley");
+		SuperMarget s2 = new SuperMarget("Hindhuthan", 2, "Biscuits");
+		SuperMarget s3 = new SuperMarget("UTC", 3, "Paste");
+		
+//		List<SuperMarget> ls = new ArrayList<>();
+//		ls.add(s1);
+////		ls.add(s2);
+////		ls.add(s3);
+		try {
+				System.out.println(s1.getBrand());
+			
+		}
+		catch (BrandNotFound e)  {
+			System.out.println("brand not found.");
+		}
+		
+		
+	}
+
+}

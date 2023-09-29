@@ -1,0 +1,36 @@
+package Date;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class DateTime {
+	public static void main(String[] args) {
+		LocalDate localDate = LocalDate.now();
+		System.out.println("Local date:"+localDate);
+		
+		LocalTime localTime = LocalTime.now();
+		System.out.println("Local Time:"+localTime);
+		
+		LocalDateTime localDateTime = LocalDateTime.now();
+		
+		DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		System.out.println(localDateTime.format(format));
+		
+		ZonedDateTime zone = ZonedDateTime.now();
+		System.out.println(zone);
+		
+		Month month = localDateTime.getMonth();
+		System.out.println(month);
+		int day = localDateTime.getDayOfMonth();
+		System.out.println(day);
+		int day = localDate.getDayOfYear();
+		System.out.println(day);
+		
+		
+	}
+
+}

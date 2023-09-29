@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.comparable.Practcie&apos; to &apos;Practice&apos;&#x0D;&#x0A;- Original project: &apos;Comparable&apos;&#x0D;&#x0A;- Original element: &apos;com.comparable.Practcie&apos;&#x0D;&#x0A;- Renamed element: &apos;com.comparable.Practice&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Practcie&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.comparable{Practcie.java[Practcie" matchStrategy="1" name="Practice" qualified="false" references="true" similarDeclarations="false" stamp="1693156488354" textual="false" version="1.0"/>
+</session>

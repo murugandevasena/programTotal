@@ -1,0 +1,45 @@
+package com.practice.daily;
+
+public class DecendingString {
+
+	public static void main(String[] args) {
+//		String a = "sdeftu";
+//		char[] s = a.toCharArray();
+//		char tem;
+//		for (int i = 0; i < a.length(); i++) {
+//			for (int j = i + 1; j < a.length(); j++) {
+//				if (s[i] > s[j]) {
+//					tem = s[i];
+//					s[i] = s[j];
+//					s[j] = tem;
+//				}
+//			}
+//
+//		}
+//		for (int j = 0; j < a.length(); j++) {
+//			System.out.print(s[j]);
+//		}
+//
+//	}
+	
+	String a="abdecf";
+	char c[]=a.toCharArray();
+	char temp;
+	for(int i=0;i<c.length;i++) {
+		for(int j=i+1;j<c.length;j++) {
+		if(c[i]>c[j]) {
+			temp=c[i];
+			c[i]=c[j];
+			c[j]=temp;
+		}
+	}
+	}
+	for(int i=0;i<a.length();i++) {
+	System.out.print(c[i]);
+}
+	
+	
+// Arrays.sort(c);
+//	System.out.println(c);
+}
+}

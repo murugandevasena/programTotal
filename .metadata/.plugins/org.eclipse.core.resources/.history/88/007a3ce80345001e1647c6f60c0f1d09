@@ -1,0 +1,40 @@
+package com.comparable;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Practice {
+	public static void main(String[] args) {
+		
+		List<Laptop> laps = new ArrayList<>();
+		laps.add(new Laptop(1, "lenova", 234, 45000));
+		laps.add(new Laptop(2, "Hp", 300, 49000));
+		laps.add(new Laptop(3, "Apple", 112, 55000));
+		laps.add(new Laptop(4, "Microsoft", 117, 35000));
+		laps.add(new Laptop(5, "Samsung", 311, 56000));
+		
+		Comparator<Laptop> com = new Comparator<Laptop>() {
+			@Override
+			public int compare(Laptop o1, Laptop o2) {
+				// TODO Auto-generated method stub
+				if(o1.getRam()%100>o2.getRam()%100 && o1.getRam()>o2.getRam()) {
+					return 1;
+				} else {
+					return -1;
+				}
+			}
+		};
+		Collections.sort(laps, com);
+		
+		 for(Laptop l:laps) {
+			 System.out.println(l);
+		 }
+		
+		 
+		 
+		
+	}
+
+}

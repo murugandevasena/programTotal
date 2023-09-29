@@ -1,0 +1,26 @@
+package com.comparable;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Practice {
+	public static void main(String[] args) {
+		
+		List<Laptop> laps = new ArrayList<>();
+		laps.add(new Laptop(1, "lenova", 234, 45000));
+		laps.add(new Laptop(2, "Hp", 300, 49000));
+		laps.add(new Laptop(3, "Apple", 112, 55000));
+		laps.add(new Laptop(4, "Microsoft", 111, 35000));
+		laps.add(new Laptop(5, "Samsung", 389, 55000));
+		
+		Collections.sort(laps);
+		
+		 for(Laptop l:laps) {
+			 System.out.println(l);
+		 }
+		
+		
+	}
+
+}

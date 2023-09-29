@@ -1,0 +1,13 @@
+package com.practice.exception;
+
+public class Login {
+	public static void main(String[] args) throws PasswordException {
+		String p= "murugan";
+		if(p.length()>8) {
+			System.out.println("login successfully.");
+		} else  {
+			throw new PasswordException("Password length should be less than 8.");
+		}
+	}
+
+}

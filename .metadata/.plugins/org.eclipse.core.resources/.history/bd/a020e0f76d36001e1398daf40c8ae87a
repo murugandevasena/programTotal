@@ -1,0 +1,24 @@
+package com.practice.daily;
+
+public class FibonacciPractice {
+	static int a=0;
+	static int b=1;
+	public static void main(String[] args) {
+		int count=15;
+		System.out.println(a+" "+b);
+		printFibonacci(count-2);
+	}
+	private static void printFibonacci(int i) {
+		// TODO Auto-generated method stub
+		int tmp=0;
+		if(i>0) {
+			tmp=a+b;
+			a=b;
+			b=tmp;
+			System.out.println(" "+tmp);
+			printFibonacci(i-1);
+		}
+		
+	}
+
+}
